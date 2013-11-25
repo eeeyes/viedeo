@@ -17,13 +17,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    // Override point for customization after application launch.
+////    // Override point for customization after application launch.
 //    self.window.backgroundColor = [UIColor whiteColor];
+//    UIImagePickerController * picker = [[UIImagePickerController alloc] init];
+//    
+//    UIViewController* parent = [[UIViewController alloc]init];
+//    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:parent];
+//    
+//    
+//    UIViewController* contentController = [[UIViewController alloc]init];
+//    contentController.view.backgroundColor = [UIColor redColor];
+//   
+//    [parent presentViewController:contentController animated:NO completion:nil];
+////    [self.window.rootViewController presentViewController:picker animated:YES completion:nil];
+////    self.window.rootViewController = picker;
 //    [self.window makeKeyAndVisible];
     return YES;
 }
 -(void)didclick:(id)obj
 {
+    
     NSLog(@"success");
     return;
 }

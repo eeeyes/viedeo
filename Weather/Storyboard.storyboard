@@ -23,12 +23,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTF-rN-VoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2191" y="-631"/>
+            <point key="canvasLocation" x="-3213" y="-1595"/>
         </scene>
-        <!--View Controller - aaabccc-->
+        <!--View Controller - choose source-->
         <scene sceneID="byY-gu-afG">
             <objects>
-                <viewController title="aaabccc" id="KMn-zE-gpv" sceneMemberID="viewController">
+                <viewController title="aaabccc" id="KMn-zE-gpv" userLabel="View Controller - choose source" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z59-9k-ZtT"/>
                         <viewControllerLayoutGuide type="bottom" id="k63-lt-8sw"/>
@@ -50,6 +50,9 @@
                                 <state key="normal" title="from gallery">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ccx-MI-L4t" kind="custom" customClass="ETModalGallerySegue" id="JrQ-ff-bEl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -58,7 +61,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WN5-vV-U1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1646" y="-631"/>
+            <point key="canvasLocation" x="-2786" y="-1605"/>
+        </scene>
+        <!--Image Picker Controller-->
+        <scene sceneID="6ms-8o-dV4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Ccx-MI-L4t" customClass="ETImagePickerController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9ky-VU-46d">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuA-AN-hX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2350" y="-1605"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

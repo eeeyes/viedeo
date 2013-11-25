@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		772F71CD1842D9D60033E0DB /* ETButtonSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 772F71CC1842D9D60033E0DB /* ETButtonSegue.m */; };
 		7756A0C9183F408B00DEF428 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7756A0C8183F408B00DEF428 /* Foundation.framework */; };
 		7756A0CB183F408B00DEF428 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7756A0CA183F408B00DEF428 /* CoreGraphics.framework */; };
 		7756A0CD183F408B00DEF428 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7756A0CC183F408B00DEF428 /* UIKit.framework */; };
@@ -24,6 +23,8 @@
 		7756A0F2183F408B00DEF428 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7756A0F0183F408B00DEF428 /* InfoPlist.strings */; };
 		7756A0F4183F408B00DEF428 /* WeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7756A0F3183F408B00DEF428 /* WeatherTests.m */; };
 		7756A0FE183F562100DEF428 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7756A0FD183F562100DEF428 /* Storyboard.storyboard */; };
+		77900E8E1842F5260079BF54 /* ETModalGallerySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 77900E8D1842F5260079BF54 /* ETModalGallerySegue.m */; };
+		7796CBDB18432A5800E58EED /* ETImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7796CBDA18432A5800E58EED /* ETImagePickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		772F71CB1842D9D60033E0DB /* ETButtonSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETButtonSegue.h; sourceTree = "<group>"; };
-		772F71CC1842D9D60033E0DB /* ETButtonSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETButtonSegue.m; sourceTree = "<group>"; };
 		7756A0C5183F408B00DEF428 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7756A0C8183F408B00DEF428 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7756A0CA183F408B00DEF428 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,6 +57,10 @@
 		7756A0F1183F408B00DEF428 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7756A0F3183F408B00DEF428 /* WeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTests.m; sourceTree = "<group>"; };
 		7756A0FD183F562100DEF428 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		77900E8C1842F5260079BF54 /* ETModalGallerySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETModalGallerySegue.h; sourceTree = "<group>"; };
+		77900E8D1842F5260079BF54 /* ETModalGallerySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETModalGallerySegue.m; sourceTree = "<group>"; };
+		7796CBD918432A5800E58EED /* ETImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETImagePickerController.h; sourceTree = "<group>"; };
+		7796CBDA18432A5800E58EED /* ETImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETImagePickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,14 +123,16 @@
 		7756A0D0183F408B00DEF428 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				7796CBD918432A5800E58EED /* ETImagePickerController.h */,
+				7796CBDA18432A5800E58EED /* ETImagePickerController.m */,
 				7756A0D9183F408B00DEF428 /* AppDelegate.h */,
 				7756A0DA183F408B00DEF428 /* AppDelegate.m */,
 				7756A0FD183F562100DEF428 /* Storyboard.storyboard */,
 				7756A0DF183F408B00DEF428 /* Images.xcassets */,
 				7756A0DC183F408B00DEF428 /* Weather.xcdatamodeld */,
 				7756A0D1183F408B00DEF428 /* Supporting Files */,
-				772F71CB1842D9D60033E0DB /* ETButtonSegue.h */,
-				772F71CC1842D9D60033E0DB /* ETButtonSegue.m */,
+				77900E8C1842F5260079BF54 /* ETModalGallerySegue.h */,
+				77900E8D1842F5260079BF54 /* ETModalGallerySegue.m */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -257,10 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				772F71CD1842D9D60033E0DB /* ETButtonSegue.m in Sources */,
+				7796CBDB18432A5800E58EED /* ETImagePickerController.m in Sources */,
 				7756A0DE183F408B00DEF428 /* Weather.xcdatamodeld in Sources */,
 				7756A0DB183F408B00DEF428 /* AppDelegate.m in Sources */,
 				7756A0D7183F408B00DEF428 /* main.m in Sources */,
+				77900E8E1842F5260079BF54 /* ETModalGallerySegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
