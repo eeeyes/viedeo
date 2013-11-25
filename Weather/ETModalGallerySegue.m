@@ -13,6 +13,7 @@
 {
     UIViewController* sourceViewController = [self sourceViewController];
     UIImagePickerController* imagePickerController = /*[[UIImagePickerController alloc]init];*/self.destinationViewController;
+    
     NSAssert([imagePickerController isKindOfClass:[UIImagePickerController class]], nil);
     
     
