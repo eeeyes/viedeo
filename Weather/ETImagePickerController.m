@@ -16,6 +16,7 @@
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super init];
+    self.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     return self;
 }
 

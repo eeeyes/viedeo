@@ -7,9 +7,10 @@
 //
 
 #import "ETCameraViewController.h"
-#import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 @interface ETCameraViewController ()
 @property (nonatomic,strong) AVCaptureSession* currentSesstion;
+@property (nonatomic,strong) AVCaptureMovieFileOutput* movieFileOutput;
 @end
 
 @implementation ETCameraViewController
@@ -34,10 +35,13 @@
     
     AVCaptureDeviceInput* deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:captureDevice error:nil];
     
+    _movieFileOutput = [[AVCaptureMovieFileOutput alloc]init];
+    
     NSAssert([_currentSesstion canAddInput:deviceInput],nil );
+    NSAssert([_currentSesstion canAddOutput:_movieFileOutput], nil);
     
     [_currentSesstion addInput:deviceInput];
-    
+    [_currentSesstion addOutput:_movieFileOutput];
     
     AVCaptureVideoPreviewLayer* previewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:_currentSesstion];
    
@@ -57,14 +61,39 @@
     for(CALayer* subLayer in [[self.view layer]sublayers])
         subLayer.frame = [[self.view layer]bounds];
     [_currentSesstion startRunning];
+   
+    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)objectAtIndex:0];
+    filePath = [filePath stringByAppendingPathComponent:@"temp.mov"];
+
+    NSURL* fileURL = [[NSURL alloc]initFileURLWithPath:filePath isDirectory:NO];
+    [[NSFileManager defaultManager]removeItemAtURL:fileURL error:nil];
+    [_movieFileOutput startRecordingToOutputFileURL:fileURL recordingDelegate:self];
+    return;
+}
+- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray *)connections
+{
+    NSLog(@"start");
+}
+- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error
+{
+    NSLog(@"finish");
+    if(error)
+        return;
+    ALAssetsLibrary* lib = [[ALAssetsLibrary alloc]init];
+    [lib writeVideoAtPathToSavedPhotosAlbum:outputFileURL completionBlock:^(NSURL *assetURL, NSError *error) {
+        [_currentSesstion stopRunning];
+        
+        
+    }];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+
+    [_movieFileOutput stopRecording];
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (void)dealloc
-{
-    [_currentSesstion stopRunning];
 }
 @end

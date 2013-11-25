@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface ETCameraViewController : UIViewController
+@interface ETCameraViewController : UIViewController<AVCaptureFileOutputRecordingDelegate>
 
 @end
